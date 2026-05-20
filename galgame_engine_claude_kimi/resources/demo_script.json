@@ -1,0 +1,232 @@
+{
+  "title": "示例剧本 - 初遇",
+  "author": "Galgame Engine",
+  "version": "1.0",
+  "scenes": [
+	{
+	  "id": "opening",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "",
+		  "text": "春天的樱花在风中飘落，我站在学校门口，看着来来往往的学生。",
+		  "background": "res://assets/bg/school_gate.png"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "今天是转学的第一天，我的心里充满了忐忑。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "？？？",
+		  "text": "喂！那边的那位同学！",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "center"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "？？？",
+		  "text": "你是新转来的学生吧？看起来迷路了呢。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "我",
+		  "text": "啊...是的。请问教学楼怎么走？"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "我叫樱井美咲，是学生会成员。正好顺路，我带你去吧！",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "left"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "就这样，我遇到了转学后的第一个朋友。",
+		  "hide_character": "all",
+		  "effect": "fade_in"
+		},
+		{
+		  "type": "choice",
+		  "options": [
+			{
+			  "text": "向她道谢，并询问她的名字",
+			  "target": "friendly_route",
+			  "effects": [
+				{
+				  "type": "set_variable",
+				  "name": "friendship",
+				  "value": 10
+				}
+			  ]
+			},
+			{
+			  "text": "冷淡地道谢，独自离开",
+			  "target": "cold_route",
+			  "effects": [
+				{
+				  "type": "set_variable",
+				  "name": "friendship",
+				  "value": -5
+				}
+			  ]
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "id": "friendly_route",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "我",
+		  "text": "谢谢你，樱井同学。我叫..."
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "不用客气！以后有什么不懂的尽管问我！",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "center"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "她灿烂的笑容让我对这个陌生的学校有了一丝期待。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "对了，放学后有空吗？我带你参观一下校园。"
+		},
+		{
+		  "type": "choice",
+		  "options": [
+			{
+			  "text": "好啊，我很乐意",
+			  "target": "good_end"
+			},
+			{
+			  "text": "抱歉，今天还有事",
+			  "target": "neutral_end"
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "id": "cold_route",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "我",
+		  "text": "...谢谢。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "我转身快步离开，留下她一个人站在原地。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "（真是个奇怪的人呢...）",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "center"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "或许是我的冷淡让她感到困惑。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "但无论如何，这一天就这样过去了。",
+		  "effect": "fade_out"
+		}
+	  ],
+	  "next_scene": "bad_end"
+	},
+	{
+	  "id": "good_end",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "太好了！那我们放学后在樱花树下见！",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "center"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "阳光透过樱花洒在她的脸上，那笑容温暖而灿烂。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "这个春天，注定是一个特别的季节。",
+		  "background": "res://assets/bg/sakura.png"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "",
+		  "text": "—— 好感结局 ——",
+		  "hide_character": "all"
+		}
+	  ]
+	},
+	{
+	  "id": "neutral_end",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "樱井美咲",
+		  "text": "这样啊...那下次有机会再说吧。",
+		  "character": "res://assets/characters/heroine1.png",
+		  "position": "center"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "虽然拒绝了她的邀请，但我注意到她眼中闪过一丝失落。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "也许以后还有机会再见面吧。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "",
+		  "text": "—— 普通结局 ——",
+		  "hide_character": "all"
+		}
+	  ]
+	},
+	{
+	  "id": "bad_end",
+	  "lines": [
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "那天之后，我再也没有在学校里见过她。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "旁白",
+		  "text": "也许这就是命运的安排吧。"
+		},
+		{
+		  "type": "dialogue",
+		  "speaker": "",
+		  "text": "—— 遗憾结局 ——"
+		}
+	  ]
+	}
+  ]
+}
