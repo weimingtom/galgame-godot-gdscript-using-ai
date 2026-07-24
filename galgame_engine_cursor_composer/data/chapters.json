@@ -1,0 +1,15 @@
+{
+  "chapters": [
+    {
+      "id": "chapter1",
+      "title": "第一章 · 樱花下的相遇",
+      "order": 1
+    },
+    {
+      "id": "chapter2",
+      "title": "第二章 · 测验前夕",
+      "order": 2,
+      "requires": "chapter1_clear"
+    }
+  ]
+}

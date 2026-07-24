@@ -1,0 +1,132 @@
+{
+  "id": "chapter2",
+  "title": "第二章 · 测验前夕",
+  "bgm": "res://assets/audio/bgm/classroom.wav",
+  "nodes": [
+    {
+      "type": "bgm",
+      "path": "res://assets/audio/bgm/classroom.wav",
+      "fade": 2.0,
+      "volume": -10
+    },
+    {
+      "type": "bg",
+      "color": "#1a3a2a",
+      "image": "res://assets/backgrounds/classroom.svg"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "旁白",
+      "text": "第二节课铃声响起。教室里安静下来，空气中弥漫着考前特有的紧张感。"
+    },
+    {
+      "type": "show",
+      "id": "linxue",
+      "name": "林雪",
+      "slot": "left",
+      "expression": "default"
+    },
+    {
+      "type": "show",
+      "id": "chenyu",
+      "name": "陈宇",
+      "slot": "right",
+      "expression": "default"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "陈宇",
+      "text": "喂，昨天的笔记借我看一眼呗？我昨晚打游戏打太晚了……",
+      "active": "chenyu"
+    },
+    {
+      "type": "if_flag",
+      "flag": "romantic",
+      "then": 8,
+      "else": 11
+    },
+    {
+      "type": "show",
+      "id": "linxue",
+      "name": "林雪",
+      "slot": "left",
+      "expression": "shy"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "笔记可以借你，但……下次考试前别熬夜了。",
+      "active": "linxue"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "旁白",
+      "text": "她悄悄把一张折好的纸条推到你手边，上面只有一行字：「放学后，老地方见。」"
+    },
+    {
+      "type": "jump",
+      "index": 13
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "笔记在这。不过陈宇，你欠我一顿午饭。",
+      "active": "linxue"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "陈宇",
+      "text": "成交！",
+      "active": "chenyu"
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "text": "「我也来帮忙复习吧。」",
+          "goto": 15,
+          "set_flag": { "study_together": true }
+        },
+        {
+          "text": "「先专注考试吧。」",
+          "goto": 17
+        }
+      ]
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "真的吗？那放学后图书馆见！",
+      "active": "linxue"
+    },
+    {
+      "type": "jump",
+      "index": 18
+    },
+    {
+      "type": "dialogue",
+      "speaker": "旁白",
+      "text": "你深吸一口气，翻开试卷。窗外樱花仍在飘落，而你的故事还在继续。"
+    },
+    {
+      "type": "set_flag",
+      "flags": { "chapter2_clear": true }
+    },
+    {
+      "type": "if_flag",
+      "flag": "romantic",
+      "then": 20,
+      "else": 21
+    },
+    {
+      "type": "end",
+      "title": "浪漫路线 · 完",
+      "text": "你与林雪的故事留下了温柔的余韵。感谢游玩！"
+    },
+    {
+      "type": "end",
+      "title": "第二章 完",
+      "text": "测验结束了。感谢游玩！你可以替换 assets 中的立绘与 BGM，继续编写更多章节。"
+    }
+  ]
+}

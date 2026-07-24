@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87b5d8"/>
+      <stop offset="100%" stop-color="#c9dff0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8c4a8"/>
+      <stop offset="100%" stop-color="#b89a78"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <rect y="480" width="1280" height="240" fill="url(#floor)"/>
+  <rect x="0" y="120" width="1280" height="360" fill="#e8dcc8" opacity="0.35"/>
+  <rect x="80" y="80" width="180" height="520" fill="#f5efe6" stroke="#c8b8a0" stroke-width="4"/>
+  <rect x="1020" y="80" width="180" height="520" fill="#f5efe6" stroke="#c8b8a0" stroke-width="4"/>
+  <circle cx="200" cy="180" r="40" fill="#ffb7c5" opacity="0.85"/>
+  <circle cx="240" cy="160" r="35" fill="#ffc9d4" opacity="0.8"/>
+  <circle cx="1080" cy="200" r="45" fill="#ffb7c5" opacity="0.85"/>
+  <circle cx="1120" cy="170" r="30" fill="#ffc9d4" opacity="0.75"/>
+  <ellipse cx="640" cy="700" rx="520" ry="40" fill="#000" opacity="0.08"/>
+</svg>

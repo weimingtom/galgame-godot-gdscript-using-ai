@@ -1,0 +1,192 @@
+{
+  "id": "chapter1",
+  "title": "第一章 · 樱花下的相遇",
+  "bgm": "res://assets/audio/bgm/spring.wav",
+  "nodes": [
+    {
+      "type": "bgm",
+      "path": "res://assets/audio/bgm/spring.wav",
+      "fade": 1.5,
+      "volume": -10
+    },
+    {
+      "type": "bg",
+      "color": "#2d4a6e",
+      "image": "res://assets/backgrounds/corridor.svg"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "旁白",
+      "text": "四月的微风拂过学院走廊，窗外樱花正盛。这是一个普通却又特别的周一早晨。"
+    },
+    {
+      "type": "show",
+      "id": "linxue",
+      "name": "林雪",
+      "slot": "center",
+      "color": "#f5c6d6",
+      "expression": "default"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "啊，你来了！我还担心你会迟到呢。",
+      "active": "linxue"
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "text": "「抱歉，路上有点堵车。」",
+          "goto": 6,
+          "set_flag": { "apologized": true }
+        },
+        {
+          "text": "「今天的樱花真漂亮啊。」",
+          "goto": 8,
+          "set_flag": { "friendly": true }
+        }
+      ]
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "没关系啦，我也刚到不久。你能来我就很开心了。",
+      "active": "linxue"
+    },
+    {
+      "type": "jump",
+      "index": 11
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "对吧！每年这个时候都是学院最美的时候呢。",
+      "active": "linxue"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "……你突然这么一说，我反而有点不好意思了。",
+      "active": "linxue"
+    },
+    {
+      "type": "jump",
+      "index": 11
+    },
+    {
+      "type": "show",
+      "id": "chenyu",
+      "name": "陈宇",
+      "slot": "right",
+      "color": "#a8d8ea",
+      "expression": "default"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "陈宇",
+      "text": "哟，你们两个聊什么呢？气氛不错嘛。",
+      "active": "chenyu"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "陈宇！别乱说……我们只是碰巧遇到而已。",
+      "active": "linxue"
+    },
+    {
+      "type": "choice",
+      "options": [
+        {
+          "text": "「是啊，只是碰巧。」",
+          "goto": 15
+        },
+        {
+          "text": "「嗯，我在等一个重要的人。」",
+          "goto": 18,
+          "set_flag": { "romantic": true }
+        }
+      ]
+    },
+    {
+      "type": "dialogue",
+      "speaker": "陈宇",
+      "text": "哈哈，好吧好吧。那我不打扰了，图书馆见！",
+      "active": "chenyu"
+    },
+    {
+      "type": "hide",
+      "id": "chenyu"
+    },
+    {
+      "type": "jump",
+      "index": 22
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "诶……？！",
+      "active": "linxue"
+    },
+    {
+      "type": "show",
+      "id": "linxue",
+      "name": "林雪",
+      "slot": "center",
+      "expression": "shy"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "陈宇",
+      "text": "哦豁——有意思！我先走了，你们慢慢聊！",
+      "active": "chenyu"
+    },
+    {
+      "type": "hide",
+      "id": "chenyu"
+    },
+    {
+      "type": "if_flag",
+      "flag": "romantic",
+      "then": 23,
+      "else": 25
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "你……真是的。脸都红了啦。",
+      "active": "linxue"
+    },
+    {
+      "type": "jump",
+      "index": 26
+    },
+    {
+      "type": "show",
+      "id": "linxue",
+      "name": "林雪",
+      "slot": "center",
+      "expression": "default"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "林雪",
+      "text": "总之，一起去教室吧？今天有重要的测验呢。",
+      "active": "linxue"
+    },
+    {
+      "type": "dialogue",
+      "speaker": "旁白",
+      "text": "你们并肩走在落英缤纷的走廊上。第一章的故事，即将走向下一幕……"
+    },
+    {
+      "type": "set_flag",
+      "flags": { "chapter1_clear": true }
+    },
+    {
+      "type": "chapter",
+      "id": "chapter2",
+      "fade_bgm": 1.0
+    }
+  ]
+}
